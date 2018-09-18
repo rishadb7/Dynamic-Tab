@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/productImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <TextView
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_toRightOf="@id/productImage"
+        android:layout_toEndOf="@id/productImage"
+        android:id="@+id/product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ProductName"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/priceSymbol"
+        android:text="Rs"
+        android:layout_below="@+id/product_name"
+        android:layout_toRightOf="@id/productImage"
+        android:layout_toEndOf="@id/productImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/price"
+        android:text="125"
+        android:layout_below="@+id/product_name"
+        android:layout_toRightOf="@id/priceSymbol"
+        android:layout_toEndOf="@id/priceSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_toRightOf="@id/productImage"
+        android:layout_toEndOf="@id/productImage"
+        android:id="@+id/product_description"
+        android:layout_below="@+id/priceSymbol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ProductDescription"
+        android:textSize="16sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/qtLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="+"
+            android:id="@+id/plusBtn"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/qty"
+            android:text="15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/minusBtn"
+            android:text="-"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_below="@id/product_description"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <at.blogc.android.views.ExpandableTextView
+            android:id="@+id/expandableTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/desc"
+            android:maxLines="0"
+            android:ellipsize="end"
+            app:animation_duration="750"/>
+
+        <!-- Optional parameter animation_duration: sets the duration of the expand animation -->
+
+        <Button
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="right"
+            android:id="@+id/button_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expand"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
